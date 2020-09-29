@@ -17,9 +17,9 @@ namespace Time_Tracker
             InitializeComponent();
         }
 
-        private void ButtonAddClick(object sender, EventArgs e)
+        private void ButtonSubmitClick(object sender, EventArgs e)
         {
-            dataGridView.Rows.Add("five", "six", "seven", "eight");
+            MessageBox.Show("Thank you for submitting your time entries.", "Submitted", MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
         }
     }
 }

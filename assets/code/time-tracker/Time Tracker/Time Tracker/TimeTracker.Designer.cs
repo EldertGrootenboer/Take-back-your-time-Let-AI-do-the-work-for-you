@@ -34,6 +34,7 @@
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonSubmit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(1075, 450);
+            this.dataGridView.Size = new System.Drawing.Size(1075, 421);
             this.dataGridView.TabIndex = 0;
             // 
             // ColumnDate
@@ -83,11 +84,22 @@
             this.ColumnHours.Name = "ColumnHours";
             this.ColumnHours.Width = 125;
             // 
+            // buttonSubmit
+            // 
+            this.buttonSubmit.Location = new System.Drawing.Point(1010, 439);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(75, 23);
+            this.buttonSubmit.TabIndex = 1;
+            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.ButtonSubmitClick);
+            // 
             // TimeTracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 474);
+            this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.dataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -105,6 +117,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTask;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHours;
+        private System.Windows.Forms.Button buttonSubmit;
     }
 }
 
