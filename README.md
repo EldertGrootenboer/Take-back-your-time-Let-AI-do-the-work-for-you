@@ -22,14 +22,14 @@ We use a bot built in PVA for our fourth demo, to retrieve signed timesheets fro
 Train your model by adding the [training timesheets](assets/training-timesheets) in the [Form OCR Testing Tool](https://fott.azurewebsites.net/projects/YTn93MVlD/predict). Use the following settings while creating the connection.
 
 - SAS URI: Blob SAS token with container name added
-  - [https://\<blob-storage-account>.blob.core.windows.net/\<container>?sv=2019-12-12&ss=bfqt&srt=sco&sp=aaaaaa&se=2025-10-01T05:01:01Z&st=2020-09-30T21:01:01Z&spr=https&sig=a%hs1212asSssDFb]
+  - [https://\<blob-storage-account>.blob.core.windows.net/\<container>?sv=2019-12-12&ss=bfqt&srt=sco&sp=aaaaaa&se=2025-10-01T05:01:01Z&st=2020-09-30T21:01:01Z&spr=https&sig=a%hs1212asSssDFb]()
 
 After creating the connection, create a new project using the following settings.
 
 - Folder path
   - Leave empty
 - Form recognizer service URI
-  - [https://\<form-recognizer-account>.cognitiveservices.azure.com/]
+  - [https://\<form-recognizer-account>.cognitiveservices.azure.com/]()
 - API key
   - aaaaaaaaaa1111111111bbbbbbbb2222
 
