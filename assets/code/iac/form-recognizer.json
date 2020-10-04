@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "formRecognizer": {
+            "defaultValue": {
+                "name": "[concat('fr-building-smarter-solutions-', uniqueString(resourceGroup().name))]",
+                "sku": "S0"
+            },
+            "type": "object"
+        },
+        "general": {
+            "defaultValue": {
+                "location": "[resourceGroup().location]",
+                "tags": {
+                    "LastModifiedDate": "[utcNow()]",
+                    "Project": "Take back your time; Let AI do the work for you!",
+                    "Purpose": "Session"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.CognitiveServices/accounts",
+            "apiVersion": "2017-04-18",
+            "name": "[parameters('formRecognizer').name]",
+            "location": "[parameters('general').location]",
+            "tags": "[parameters('general').tags]",
+            "sku": {
+                "name": "[parameters('formRecognizer').sku]"
+            },
+            "kind": "FormRecognizer",
+            "properties": {
+                "customSubDomainName": "[parameters('formRecognizer').name]",
+                "publicNetworkAccess": "Enabled"
+            }
+        }
+    ]
+}

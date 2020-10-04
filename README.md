@@ -15,6 +15,18 @@ We use a bot built in PVA for our fourth demo, to retrieve signed timesheets fro
 - Get me my timesheet please
 - I would like to get a timesheet for Contoso
 
+## TimeChimp
+
+Create an account on [TimeChimp](https://www.timechimp.com/), and create the following customers with their underlying projects.
+
+- Contoso
+  - Azure Functions
+- Fabrikam
+  - My Project
+  - Teams Implementation
+- Northwind
+  - iPaaS implementation
+
 ## Deployment
 
 ### Form Recognizer
@@ -32,6 +44,10 @@ After creating the connection, create a new project using the following settings
   - [https://\<form-recognizer-account>.cognitiveservices.azure.com/]()
 - API key
   - aaaaaaaaaa1111111111bbbbbbbb2222
+
+### Server software
+
+After creating the server, make sure to install the On-premises Data Gateway agent. This is going to be used for communication between Power Automate and Power Automate Desktop.
 
 ### SharePoint
 
